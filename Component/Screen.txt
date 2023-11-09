@@ -1,0 +1,45 @@
+<ScrollView contentContainerStyle={{ paddingBottom: 400 }}>
+           
+                <Image source={require("../Component/assets/hira.jpg")} style={{
+                    alignSelf: 'center', width: responsiveWidth(40), height: responsiveHeight(20),
+                }} />
+                <Text style={{
+                    fontWeight: 'bold', fontSize: 15, color: 'black', left: 25
+                }}>Your Number :- {mobile}</Text>
+
+
+                <Text style={{
+                    fontWeight: 'bold', fontSize: 15, color: 'black', left: 25, top: 10
+                }}>Your Name :- {name}</Text>
+
+                <Text style={{
+                    fontWeight: 'bold', fontSize: 15, color: 'black', left: 25, top: 20,
+                }}>Address :- {company}</Text>
+
+
+                <View style={{ left: 20, top: 300 }}>
+                    <TouchableOpacity
+                        onPress={{}}
+                        style={styles.loginBtn1}>
+                        <Text style={{ color: 'white' }}>Show Contact</Text>
+                    </TouchableOpacity>
+                </View>
+
+
+
+                <View style={{ left: 45, top: 50 }}>
+                    <SelectList
+                        setSelected={setSelected1} data={selectedValue}
+                        save={'value'} boxStyles={{ maxWidth: 320, borderColor: "black", borderWidth: 1 }}
+                        search={false} dropdownStyles={{ maxWidth: 320, borderColor: 'black' }} dropdownTextStyles={{ color: 'black' }} />
+                </View>
+
+                <View style={{ left: 20, top: 200 }}>
+                    <TouchableOpacity
+                        onPress={() => Fetch()}
+                        style={styles.loginBtn}>
+                        <Text style={{ color: 'white' }}>Submit</Text>
+                    </TouchableOpacity>
+                </View>
+              
+            </ScrollView>
